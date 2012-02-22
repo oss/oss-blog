@@ -177,49 +177,6 @@ A.plainblack {
 	vertical-align: bottom;
 }
 
-#right_links {
-	float: right;
-	margin-bottom: 50px;
-	z-index: 9005;
-}
-
-/* First box of three within right_boxes */
-#right_top {
-	width: 310px;
-	padding-bottom: 5px;
-	}
-#right_top a:link{
-	color: #669;
-	font-size: .8em;
-}
-#right_top a:visited{
-	color: #669;
-	font-size: .8em;
-}
-
-/* Second box of three within right_boxes */
-#right_middle{
-	width: 310px;
-	padding-bottom: 0px;
-	color: #000; 
-	}
-#right_middle a:link{
-	color: #669;
-	font-size: .8em;
-}
-#right_middle a:visited{
-	color: #669;
-	font-size: .8em;
-}
-
-/* defines the news table within right_top */
-.news{
-	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	width: 100%;
-	text-align: left;
-	border-collapse: collapse;
-}
 
 .pagination {
 	margin: 0;
@@ -228,6 +185,8 @@ A.plainblack {
 #right_nav {
 	z-index: 0;
 	float: left;
+	padding-left: 15px;
+	padding-top: 15px;
 }
 
 .links {
@@ -237,8 +196,20 @@ A.plainblack {
 	list-style-type: none;
 }
 
+.links li:hover {
+	background: #d6d2c9;
+}
+
 .links a:link {
 	color: #666699;
+}
+
+.links a:visited {
+	color: #666699;
+}
+
+.links a:hover {
+	text-decoration: none;
 }
 
 .links_top {
@@ -249,13 +220,14 @@ A.plainblack {
 	padding: 8px;
 	font-weight: bold;
 	color: #fff;
-	background: #505050;
+	background: #505050 !important;
 }
 
 .links_mid {
 	padding: 8px;
 	color: #669;
 	background: #d2d2d2;
+	border-top: 1px solid whitesmoke;
 }
 
 .links_last {
@@ -266,6 +238,7 @@ A.plainblack {
 	padding: 8px;
 	color: #669;
 	background: #d2d2d2;
+	border-top: 1px solid whitesmoke;
 }
 
 .drop_menu {
@@ -288,8 +261,8 @@ A.plainblack {
 	width: 178px;
 }
 
-footer {
-	width: 700px;
-	margin-left: auto;
+.footer {
+	width: 600px;
 	margin-right: auto;
+	margin-left: auto;
 }
