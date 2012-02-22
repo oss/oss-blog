@@ -1,0 +1,45 @@
+---
+layout: frontpage
+title: Rutgers OSS 
+tagline: Open Systems Solutions
+---
+{% include JB/setup %}
+{% assign last = paginator.posts.last %}
+
+{% for post in paginator.posts %}
+
+{% if forloop.last != true %}
+ <div class="page-header mid-header">
+  <h1> <a class="plainblack" href="{{post.url}}"> {{post.title}} </a><small>{{ post.tagline }} - {{post.date | date_to_string}}</small></h1>
+ </div>
+	{{ post.content | truncate: 400}} <br /> &raquo; <a href="{{post.url}}">read more</a> <br /><br /><br />
+{% endif %}
+{% endfor %}
+
+ <div class="page-header mid-header">
+  <h1> <a class="plainblack" href="{{last.url}}"> {{last.title}} </a><small>{{ last.tagline }} - {{last.date | date_to_string}}</small></h1>
+ </div>
+	{{ last.content | truncate: 400}} <br /> &raquo; <a href="{{last.url}}">read more</a>
+
+<hr>
+
+<div class="pagination">
+      <ul>
+      {% if paginator.next_page %}
+	<li class="prev"><a href="{{ BASE_PATH }}/page{{ paginator.next_page }}" title="Older Posts">&larr; Older</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Already At Oldest</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if paginator.previous_page %}
+	{% if paginator.previous_page == 1 %}
+        <li class="next"><a href="/" title="Newer Posts">Newer &rarr;</a></li>
+	{% else %}
+        <li class="next"><a href="{{ BASE_PATH }}/page{{ paginator.previous_page }}" title="{{ BASE_PATH }}/page{{ paginator.previous_page }}">Newer &rarr;</a></li>
+	{% endif %}
+      {% else %}
+        <li class="next disabled"><a>Already At Newest &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+
