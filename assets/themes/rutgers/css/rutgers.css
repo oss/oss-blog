@@ -1,15 +1,16 @@
 .topbar {
 	position: absolute;
 	z-index: 0;
-	background-image: url('images/spread.gif');
-	background-repeat: repeat-x;
+	min-width: 1000px;
 }
 
-.topbar-inner, .topbar, .fill {
+.topbar-inner, .topbar .fill {
+	background-color: transparent;
 	height: 134px;
 	background-image: url('/images/spread.gif') !important;
-	repeat-background: repeat-x;
-	background-repeat: repeat-x;
+	repeat-background: repeat;
+	background-repeat: repeat;
+	width: 100%;
 }
 
 .page-header {
@@ -19,7 +20,7 @@
 div.container {
 	padding-top: 98px;
 	width: 1000px;
-	margin-right: 40px;
+	margin-right: auto;
 }
 
 div.content {
@@ -78,7 +79,7 @@ div.span14 {
 	-moz-border-radius-bottomleft: 5px;
 	-webkit-border-bottom-left-radius: 5px;
 	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-right-radius: px;
+	-webkit-border-bottom-right-radius: 5px;
 	float: left; /*makes the div enclose the list */
 	}
 #listmenu ul {margin: -1px 0 0 0;}/* indents ul from edge of container */
