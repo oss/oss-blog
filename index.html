@@ -12,14 +12,14 @@ tagline: Open Systems Solutions
  <div class="page-header mid-header">
   <h1> <a class="plainblack" href="{{post.url}}"> {{post.title}} </a><small>{{ post.tagline }} - {{post.date | date_to_string}}</small></h1>
  </div>
-	{{ post.content | truncate: 400}} <br /> &raquo; <a href="{{post.url}}">read more</a> <br /><br /><br />
+	{{ post.content | truncate: 400}} <br /> &raquo; <a href="{{ BASE_PATH }}{{post.url}}">read more</a> <br /><br /><br />
 {% endif %}
 {% endfor %}
 
  <div class="page-header mid-header">
   <h1> <a class="plainblack" href="{{last.url}}"> {{last.title}} </a><small>{{ last.tagline }} - {{last.date | date_to_string}}</small></h1>
  </div>
-	{{ last.content | truncate: 400}} <br /> &raquo; <a href="{{last.url}}">read more</a>
+	{{ last.content | truncate: 400}} <br /> &raquo; <a href="{{ BASE_PATH }}{{last.url}}">read more</a>
 
 <hr>
 
